@@ -91,10 +91,11 @@ body
 					&:hover 
 						color: red
 						transition: 0.3s
+
 	&-phones 
 		&-item 
 			display: flex
-			align-items: flex-end
+			align-items: center
 			padding-bottom: 0.78vw
 			&__img
 				width: 1.96vw 
@@ -111,11 +112,11 @@ body
 				&__title
 					display: flex 
 					margin-right: 0.39vw
-					padding-bottom:  0.78vw
+					padding-bottom:  0.4vw
 					align-items: baseline
 					div 
-						width:  0.54vw 
-						height:  0.54vw
+						width:  0.40vw 
+						height:  0.40vw
 						background-color: #34b654
 						border-radius: 50%
 						margin-right: 0.39vw
@@ -154,8 +155,13 @@ body
 		img 
 			padding-right: 0.390vw
 			width: 11%
-.menu-nav 
-	margin-bottom: 3.06vw
+		&:focus 
+			outline: none
+		&:hover
+			background-color: #e5eaeb 
+			transition: all 0.3s
+.menu-nav 	
+	margin-bottom: 4.10vw
 	background-color: #fff
 	border-radius:  0.234vw  0.234vw  0.234vw  0.234vw
 	box-shadow:  0.625vw 1.25vw 0vw -0.625vw #f9f7f6
@@ -184,7 +190,7 @@ body
 .info 
 	display: flex
 	flex-direction: column
-	padding-bottom: 3.90vw
+	max-width: 68.125vw
 	&-title
 		padding-bottom: 1.50vw 
 		p 
@@ -196,11 +202,11 @@ body
 			font-weight: 500
 	&-block
 		display: flex
-		align-items: center
+		align-items: flex-start
 		&__list 
-			padding-right: 4.68vw
+			padding-right: 4.2vw
 		ul
-			padding-bottom: 4.6875vw
+			padding-bottom: 2.6875vw
 			li
 				display: flex 
 				align-items: center 
@@ -244,6 +250,9 @@ body
 		font-weight: 500
 		color: #fff
 		text-transform: uppercase
+	&:hover 
+		background-color: #d7747a
+		transition: 0.3s
 	img 
 		position: absolute
 		top: 0
@@ -274,12 +283,15 @@ body
 			font-size: 1.093vw
 			font-weight: 300
 			color: #fff
+		&:hover 
+			background-color: #d7747a
+			transition: 0.3s
 .info-image
 	img
-		max-width: 60%
-		max-height: 60%
+		max-width: 65%
+		max-height: 65%
 		position: absolute
-		bottom: 0
+		bottom:  4.718vw
 		right: 0
 .info::after 
 	content: ""
@@ -298,7 +310,7 @@ body
 	display: flex
 	flex-direction: column 
 	align-items: center
-	transform: translateY(-1.953vw)
+	transform: translateY(-1.4vw)
 	&__line::after
 		content: ""
 		display: inline-block
@@ -334,3 +346,16 @@ body
 	position: absolute
 	transform: rotate(-90deg)
 
+// &:hover 
+// 	background-color: #a1cf7a
+// 	border: 0 
+// &:active
+// 	border: 0
+// &:focus 
+// 	outline: none
+
+
+// @media (max-width: 900px)
+// 767
+// 600
+// @media (max-width: 500px)
