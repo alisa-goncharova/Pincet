@@ -36,22 +36,23 @@ body
 	background-repeat: no-repeat
 	background-size: cover
 	width: 100%
-	padding-top: 2.34vw
-	padding-bottom: 2.34vw
+	padding-top: 1.90vw
+	padding-bottom: 1.90vw
 .header
 	display: flex
 	align-items: center
-	justify-content: space-between
+	justify-content: space-evenly
 	padding-bottom: 1.17vw
 	&-logo
 		display: flex
 		align-items: center
 		&__img 
-			padding-right: 3.12vw
+			img 
+				width: 70%
 		&__description
 			p
 				font-family: "Museo Sans Cyrl", sans-serif 
-				font-size: 1.09vw
+				font-size: 0.80vw
 				font-weight: 300
 				color: #5d5a5a
 				line-height: 1.09vw
@@ -59,19 +60,19 @@ body
 		display: flex
 		align-items: center
 		&__img 
-			width: 5.46vw
-			height: 5.46vw
+			width: 4.1vw
+			height: 4.1vw
 			background-image: url('../img/header/map.png')
 			border-radius: 50%
 			background-size: auto 7.0vw
-			box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1)
+			box-shadow: 0 0 0.78vw 0.39vw rgba(221, 221, 221, 1)
 			margin-right: 1.95vw
 		&-content 
 			&__subtitle 
-				padding-bottom: 1.56vw
+				padding-bottom: 0.1vw
 				p
 					font-family: "Museo Sans Cyrl", sans-serif
-					font-size: 1.25vw
+					font-size: 0.80vw
 					font-weight: 600
 					line-height: 1.56vw
 					color: #282828
@@ -80,26 +81,32 @@ body
 			&__link
 				a 
 					font-family: "Museo Sans Cyrl", sans-serif
-					font-size: 1.01vw
+					font-size: 0.70vw
 					font-weight: 500
 					color: #ff6078
 					line-height: 100%
 					border-bottom:  0.078vw #ff6078 dashed
 					text-decoration: none
+					text-transform: uppercase
+					&:hover 
+						color: red
+						transition: 0.3s
 	&-phones 
 		&-item 
 			display: flex
 			align-items: flex-end
 			padding-bottom: 0.78vw
 			&__img
-				width: 2.96vw 
-				height: 2.96vw
+				width: 1.96vw 
+				height: 1.96vw
 				border-radius: 50%
 				background-color: #fff
 				display: flex
 				align-items: center
 				justify-content: center
 				margin-right:  1.17vw
+				img 
+					width: 50%
 			&-content 
 				&__title
 					display: flex 
@@ -114,20 +121,20 @@ body
 						margin-right: 0.39vw
 					p
 						font-family: "Museo Sans Cyrl", sans-serif
-						font-size: 0.93vw
+						font-size: 0.70vw
 						font-weight: 500
 						color: #363535 
 				&__subtitle-number 
 					p
 						font-family: "Museo Sans Cyrl", sans-serif 
-						font-size: 1.87vw
+						font-size: 1.20vw
 						font-weight: 500
 						line-height: 1.40vw
 .header-phones-item:last-child 
 	display: flex
 	align-items: center
 	font-family: "Museo Sans Cyrl", sans-serif 
-	font-size: 1.25vw
+	font-size: 0.80vw
 	font-weight: 500
 	line-height:  1.64vw 
 	span 
@@ -140,22 +147,26 @@ body
 		display: flex
 		align-items: center
 		font-family: "Museo Sans Cyrl", sans-serif 
-		font-size: 1.17vw
+		font-size: 0.80vw
 		font-weight: 500
 		box-shadow:  0vw 0.312vw 0vw 0vw #ccc
+		background-color: #fff
 		img 
 			padding-right: 0.390vw
+			width: 11%
 .menu-nav 
-	margin-bottom: 14.60vw
+	margin-bottom: 3.06vw
 	background-color: #fff
 	border-radius:  0.234vw  0.234vw  0.234vw  0.234vw
 	box-shadow:  0.625vw 1.25vw 0vw -0.625vw #f9f7f6
+	max-width: 82%
 	ul
 		align-items: center
 		display: flex
 		list-style: none
+		padding-bottom: 1.10vw
+		padding-top: 1.10vw
 		li
-			padding: 0.625vw
 			margin-left: 2.34vw
 			transition: 0.5s
 			a 
@@ -163,44 +174,44 @@ body
 				text-decoration: none
 				display: block
 				color: #282828
-				font-size: 1.17vw
+				font-size: 0.80vw
 				font-family: "Museo Sans Cyrl", sans-serif
-				font-weight: 500
-				transition-property: font-weight
-				&:hover 
+				font-weight: 300
+				transition: all 0.3s 
+				&:hover
+
 					font-weight: 600
 .info 
 	display: flex
 	flex-direction: column
+	padding-bottom: 3.90vw
 	&-title
-		padding-bottom: 5.07vw 
+		padding-bottom: 1.50vw 
 		p 
 		font-family: "Museo Sans Cyrl", sans-serif
-		font-size: 3.75vw
-		line-height:  4.29vw
+		font-size: 2.60vw
+		line-height:  3.20vw
 		font-weight: 300
 		span 
 			font-weight: 500
 	&-block
 		display: flex
-		// justify-content: space-between
 		align-items: center
 		&__list 
 			padding-right: 4.68vw
-			// position: relative
 		ul
 			padding-bottom: 4.6875vw
 			li
 				display: flex 
 				align-items: center 
 				font-family: "Museo Sans Cyrl", sans-serif
-				font-size: 1.40vw 
+				font-size: 1.0vw 
 				font-weight: 300
-				line-height: 2.81vw
+				line-height: 1.90vw
 				color: #282828
 				list-style: none
 				span
-					padding: 0.78vw
+					padding: 0.50vw
 					border: 0.078vw solid rgba(239, 148, 153, 0.2)
 					border-radius: 50%
 					box-shadow: 0vw 0vw 1.17vw 0.31vw rgba(239, 148, 153, 0.2)
@@ -211,41 +222,47 @@ body
 				::before
 					content: ""
 					position: absolute 
-					width: 0.78vw
-					height: 0.78vw
+					width: 0.50vw
+					height: 0.50vw
 					background-color: #ef9499
 					border-radius: 50%
 .info-block__button 
 	position: relative 
-	padding-left:  3.51vw 
-	padding-top: 1.95vw
-	padding-bottom: 1.95vw
+	padding-left:  3.01vw 
+	padding-top: 1.45vw
+	padding-bottom: 1.45vw
 	border-radius:  3.51vw  3.51vw
 	border: 0
 	background-color: #f5a8ab
 	box-shadow: 0vw 0.31vw 0vw 0vw #d7747a
-	max-width: 25.78vw
+	max-width: 17.70vw
 	margin-bottom:  5.46vw
 	a
 		text-decoration: none
 		font-family: "Museo Sans Cyrl", sans-serif
-		font-size: 1.09vw 
-		font-weight: 700
+		font-size: 0.80vw 
+		font-weight: 500
 		color: #fff
 		text-transform: uppercase
 	img 
 		position: absolute
 		top: 0
-		transform: translateX(3.51vw)
+		transform: translateX(0.51vw)
+		width: 68%
 .info-cart 
 	display: flex
 	align-items: flex-end
 	position: relative
-	&-image 
+	&__image 
+		img 
+			width: 70%
 	&__btn
+		position: absolute
+		bottom:  0.78vw
+		right: 8.04vw
 		background-color: #f5a3a6
-		width: 3.125vw
-		height: 3.125vw
+		width: 2.5vw
+		height: 2.5vw
 		border-radius: 50%		
 		display: flex
 		align-items: center
@@ -258,17 +275,62 @@ body
 			font-weight: 300
 			color: #fff
 .info-image
+	img
+		max-width: 60%
+		max-height: 60%
+		position: absolute
+		bottom: 0
+		right: 0
+.info::after 
+	content: ""
+	background-image: url("../img/header/navigation.png")
+	background-position: center
+	background-size: cover
+	display: block
+	width: 100%
+	height: 15%
 	position: absolute
 	bottom: 0
-	right: 0
-	z-index: 1000
-	img
-		max-width: 100%
-		max-height: 100%
-// .navigation 
-// 	img 
-// 		position: absolute
-// 		bottom: 0
+	left: 0
 
-
+.navigation
+	position: relative
+	display: flex
+	flex-direction: column 
+	align-items: center
+	transform: translateY(-1.953vw)
+	&__line::after
+		content: ""
+		display: inline-block
+		width: 0.156vw 
+		height:  1.562vw
+		border-radius: 0.078vw
+		background-color: #f6babd
+	&__icon
+		border: 0.156vw solid #f6babd
+		border-radius: 50% 
+		width: 1.95vw
+		height: 1.95vw
+		display: flex 
+		align-items: center
+		justify-content: center
+		img 
+			width: 41%
+	&__circle 
+		border: 0.234vw solid #f6babd
+		border-radius: 50% 
+		width: 0.625vw
+		height: 0.625vw
+		transform: translateY(-0.156vw)
+.navigation::before
+	content: ""
+	display: block 
+	background-image: url("../img/header/circle.png")
+	background-repeat: no-repeat 
+	background-size: cover 
+	background-position: center
+	width: 15%
+	height: 100%
+	position: absolute
+	transform: rotate(-90deg)
 
