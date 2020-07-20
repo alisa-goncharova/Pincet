@@ -1,4 +1,7 @@
 @import "../sass/fonts.sass"
+//
+
+//
 body, html, ul, a, p, label, form,input 
 	margin: 0
 	padding: 0
@@ -9,6 +12,8 @@ body
 	font-family: 'Roboto', sans-serif
 	width: 100%
 	line-height: 1
+::-webkit-scrollbar
+	width: 0
 .wrapper
 	// max-width: 1920px
 	margin-top: 0
@@ -141,7 +146,7 @@ body
 	span 
 		font-weight: 600
 .header-button
-	button
+	a
 		border: 0 
 		padding: 1.01vw
 		border-radius: 3.51vw 3.51vw
@@ -152,6 +157,8 @@ body
 		font-weight: 500
 		box-shadow:  0vw 0.312vw 0vw 0vw #ccc
 		background-color: #fff
+		text-decoration: none
+		color: #000
 		img 
 			padding-right: 0.390vw
 			width: 11%
@@ -160,7 +167,7 @@ body
 		&:hover
 			background-color: #e5eaeb 
 			transition: all 0.3s
-.menu-nav 	
+.menu-nav
 	margin-bottom: 4.10vw
 	background-color: #fff
 	border-radius:  0.234vw  0.234vw  0.234vw  0.234vw
@@ -194,10 +201,10 @@ body
 	&-title
 		padding-bottom: 1.50vw 
 		p 
-		font-family: "Museo Sans Cyrl", sans-serif
-		font-size: 2.60vw
-		line-height:  3.20vw
-		font-weight: 300
+			font-family: "Museo Sans Cyrl", sans-serif
+			font-size: 2.60vw
+			line-height:  3.20vw
+			font-weight: 300
 		span 
 			font-weight: 500
 	&-block
@@ -265,28 +272,41 @@ body
 	&__image 
 		img 
 			width: 70%
-	&__btn
-		position: absolute
-		bottom:  0.78vw
-		right: 8.04vw
-		background-color: #f5a3a6
-		width: 2.5vw
-		height: 2.5vw
-		border-radius: 50%		
-		display: flex
-		align-items: center
-		justify-content: center
-		box-shadow: 0.156vw  0.078vw 0vw 0vw #d7747a
-		a 
-			text-decoration: none 
-			font-family: "Museo Sans Cyrl", sans-serif
-			font-size: 1.093vw
-			font-weight: 300
-			color: #fff
+	&-block
+		cursor: position
+		&__btn
+			position: absolute
+			bottom:  0.78vw
+			right: 8.04vw
+			background-color: #f5a3a6
+			width: 2.5vw
+			height: 2.5vw
+			border-radius: 50%		
+			display: flex
+			align-items: center
+			justify-content: center
+			box-shadow: 0.156vw  0.078vw 0vw 0vw #d7747a
+			animation: radial-pulse 1s infinite
+			a 
+				text-decoration: none 
+				font-family: "Museo Sans Cyrl", sans-serif
+				font-size: 1.093vw
+				font-weight: 300
+				color: #fff
+			&:hover 
+				background-color: #d7747a
+				transition: 0.3s
 		&:hover 
-			background-color: #d7747a
-			transition: 0.3s
+			cursor: pointer
+@keyframes radial-pulse 
+  0% 
+    box-shadow: 0 0 0 0vw rgba(0, 0, 0, 0.5)
+ 
+  100% 
+    box-shadow: 0 0 0 0.78vw rgba(0, 0, 0, 0)
+ 
 .info-image
+	position:relative
 	img
 		max-width: 65%
 		max-height: 65%
@@ -346,16 +366,153 @@ body
 	position: absolute
 	transform: rotate(-90deg)
 
-// &:hover 
-// 	background-color: #a1cf7a
-// 	border: 0 
-// &:active
-// 	border: 0
-// &:focus 
-// 	outline: none
+.paralax-cloud1
+	display: block 
+	background-repeat: no-repeat
+	background-size: cover
+	position: absolute
+	width: 19.53vw 
+	height: 19.53vw
+	top: 13.28vw
+	left: 5.78vw
+.paralax-cloud2
+	display: block 
+	background-repeat: no-repeat
+	background-size: cover
+	width: 11.48vw
+	height: 20.78vw
+	position: absolute
+	top:  3.35vw
+	right: 0vw
+.hint
+	width: 9.21vw 
+	height: 10.70vw
+	background-color: #fff
+	position: absolute
+	left: 8.98vw
+	top: 0vw
+	border-radius: 2.34vw 2.34vw 0.781vw 0.781vw
+	z-index: 1
+	box-shadow: 1.09vw -1.09vw 1.48vw -0.859vw #eee
+	display: none
+	p
+		padding: 1.95vw
+		text-align: center
+		font-family: 'Museo Sans Cyrl', sans-serif
+		font-size: 0.78vw
+		font-weight: 300
+		line-height: 1.01vw
+.info-cart-block__btn:hover ~ .hint 
+	display: block
+	transition: all 0.3s
+.hint-map 
+	position: absolute
+	z-index: 1
+	display: none 
+.header-map-content__link:hover ~ .hint-map
+	display: block
+	transition: all 0.3s
+/* свойства модального окна по умолчанию*/
 
+.modal
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background: rgba(0, 0, 0, 0.5)
+  z-index: 1050
+  opacity: 0
+  -webkit-transition: opacity 400ms ease-in
+  -moz-transition: opacity 400ms ease-in
+  transition: opacity 400ms ease-in
+  pointer-events: none
+  &:target
+    opacity: 1
+    pointer-events: auto
+    overflow-y: auto
+.modal-dialog
+  position: relative
+  width: auto
+  margin:  0.78vw
+  background-color: #fcf5f1 
+  background-image: url("../img/modal/background-modal.png")
+  background-size: cover 
+  background-repeat: no-repeat 
+  background-position: center
+  border-radius:  0.78vw
+  padding: 5.468vw
+.modal-content__title
+	padding-bottom: 2.34vw
+	p 
+		font-family: 'Museo Sans Cyrl', sans-serif
+		font-size: 2.03vw
+		font-weight: 300
+.modal-content__subtitle
+	padding-bottom: 3.125vw 
+	p 
+		font-family: 'Museo Sans Cyrl', sans-serif
+		font-size: 1.01vw
+		font-weight: 300
+.modal-content__form
+	// padding-bottom: 77px
+	form 
+		display: flex 
+		flex-direction: column
+		input 
+			margin-bottom: 1.56vw
+			padding: 1.17vw
+			border-radius: 3.125vw 3.125vw
+			&:placeholder
+				font-family: 'Museo Sans Cyrl', sans-serif
+				font-size: 1.01vw
+				font-weight: 300
+			&:focus 
+				outline: none
+		&:before 
+			content: ""
+			display: block
+			position: absolute
+			background-image: url("../img/modal/book.png")
+			background-repeat: no-repeat
+			width: 27.578vw
+			height: 30.156vw
+			bottom: 13%
+			left: -15.15vw
+.close
+  float: right
+  font-family: sans-serif
+  font-size:  1.875vw
+  font-weight: 700
+  line-height: 1
+  color: #000
+  text-shadow: 0  0.078vw 0 #fff
+  opacity: 0.5
+  text-decoration: none
 
-// @media (max-width: 900px)
-// 767
-// 600
-// @media (max-width: 500px)
+  // &:focus, &:hover
+  //   color: #000
+  //   text-decoration: none
+  //   cursor: pointer
+  //   opacity: .75
+.modal-dialog 
+	max-width:  32.42vw
+	max-height: 27.73vw
+	margin-left: auto
+	margin-right: auto
+	//730 670
+.submit 
+	background-color: #f4a4a7
+	font-family: 'Museo Sans Cyrl', sans-serif
+	font-size: 13px
+	text-transform: uppercase
+	color: #fff
+	font-weight: 500
+.modal-btn
+	color: red
+	max-width: 44.7vw
+	a 
+		font-size: 1.0vw
+	img 
+		width: 13.28vw
+		transform: translateX(9.51vw)
